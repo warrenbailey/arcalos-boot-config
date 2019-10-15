@@ -86,6 +86,10 @@ pipelineConfig:
                 dir: /workspace/source/env
                 command: jx
                 args: ['step','helm','apply', '--boot', '--remote', '--name', 'jenkins-x', '--provider-values-dir', '../kubeProviders']
+              - name: generate-installation-token
+                args: ['step', 'github', 'app', 'token', '-g', 'https://jenkins-x-github-app-jx-staging.jenkins-x.live']
+                command: jx
+                dir: /workspace/source/env
               - name: verify-env
                 dir: /workspace/source
                 command: jx
