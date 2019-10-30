@@ -1,6 +1,8 @@
 autoUpdate:
   enabled: true
   schedule: '0 0 * * *'
+githubApp:
+  enabled: true
 cluster:
   clusterName: ""
   environmentGitOwner: ""
