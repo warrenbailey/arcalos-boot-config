@@ -176,8 +176,9 @@ autoUpdate:
   enabled: {{ .Requirements.autoUpdate.enabled }}
 {{- end }}
 
-
-{{- if .Requirements.githubApp.enabled }}
+{{- if .Requirements.githubApp }}
+githubApp:
+  enabled: {{- if .Requirements.githubApp.enabled }}
 refresh:
   refreshJobrb:
     enabled: true
